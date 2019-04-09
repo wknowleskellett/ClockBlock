@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "ClockBlock",
+	"version":"1.0",
+
+	"description": "Blocks certain websites at certain times.",
+
+	"icons": {
+		"48": "icons/clockblock-48.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"js": ["youtubeFlash.js"]
+		},
+		{
+			"matches": ["*://*.netflix.com/*"],
+			"js": ["netflixBlock.js"]
+		}
+	]
+}
